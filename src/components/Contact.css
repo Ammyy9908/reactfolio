@@ -1,0 +1,92 @@
+.contact{
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.contact form{
+    width: 100%;
+    margin-top: 115px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.control-field{
+    width: 705px;
+    height: 64px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+.control-field input{
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border-radius: inherit;
+    border: 2px solid #D3D3D3;
+    font-weight: 400;
+    color: #CFCFCF;
+    font-size: 24px;
+    overflow: hidden;
+}
+.control-field input::placeholder{
+    color: #CFCFCF;
+    font-size: 24px;
+}
+.message{
+    width: 705px;
+    border: 2px solid #D3D3D3;
+    resize: none;
+    height: 233px;
+    border-radius: 5px;
+    padding-top: 10px;
+    font-family: var(--font);
+    font-size: 24px;
+    color: #a8a8a8;
+}
+.message::placeholder{
+    color: #CFCFCF;
+    font-size: 24px;
+}
+
+.submit_btn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 257px;
+    height: 45px;
+    border: 1px solid transparent;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0px 100px 80px rgba(82, 61, 232, 0.06), 0px 25.6447px 24.1177px rgba(82, 61, 232, 0.0390953), 0px 10.2689px 10.0172px rgba(82, 61, 232, 0.03), 0px 3.97552px 3.62304px rgba(82, 61, 232, 0.0209047);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+
+
+@media screen and (max-width:750px){
+    .control-field,.message{
+        width: 100% !important;
+        
+    }
+
+    .control-field{
+        height: 48px;
+    }
+    .control-field input{
+    
+    font-size: 16px;
+    }
+    .control-field input::placeholder{
+        font-size: 16px;
+    }
+    .message{
+        font-size: 16px;
+    }
+
+    .message::placeholder{
+        font-size: 16px;
+    }
+
+    .submit_btn{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,77 @@
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sticky_nav{
+    position: sticky;
+    top:0;
+}
+
+.brand-logo{
+    flex: 1;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+
+}
+nav ul{
+    padding: 0;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    justify-content: space-evenly;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    line-height: 21.09px;
+}
+
+.social__profiles{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:12px;
+}
+.social__profiles button{
+    border: 1px solid transparent;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.mobile_nav_menu{
+    width: 35px;
+    height: 35px;
+    border: 1px solid transparent;
+    border: 0;
+    background-color: transparent;
+    display: none;
+    
+}
+.mobile_nav_menu svg{
+    width: 23px;
+    height: 23px;
+}
+@media screen and (max-width:565px){
+    .social__profiles{
+        display: none;
+    }
+    .mobile_nav_menu{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+}

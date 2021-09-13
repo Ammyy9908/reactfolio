@@ -1,13 +1,15 @@
+:root{
+  --font:'Roboto', sans-serif;
+  --primary-color:#000000;
+  --secondary-color:#F3BE36;
+  --card-color:#F1F0F0;
+  --shadow:drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.22)) drop-shadow(0px 46.2196px 33.4221px rgba(0, 0, 0, 0.152568)) drop-shadow(0px 26.7877px 17.869px rgba(0, 0, 0, 0.123464)) drop-shadow(0px 15.3416px 10.0172px rgba(0, 0, 0, 0.103024)) drop-shadow(0px 7.95086px 5.32008px rgba(0, 0, 0, 0.0840779)) drop-shadow(0px 3.09436px 2.21381px rgba(0, 0, 0, 0.0599596));
+  --box-shadow:0px 100px 237px rgba(0, 0, 0, 0.07), 0px 62.3296px 57.3485px rgba(0, 0, 0, 0.0427011), 0px 30.5157px 26.4288px rgba(0, 0, 0, 0.0364036), 0px 14.6164px 15.1751px rgba(0, 0, 0, 0.033518), 0px 7.09689px 9.50841px rgba(0, 0, 0, 0.0310268), 0px 2.82396px 5.04152px rgba(0, 0, 0, 0.0260898);
+  --fab-shadow:0px 100px 80px rgba(41, 255, 243, 0.15), 0px 31.5758px 33.4221px rgba(41, 255, 243, 0.0993905), 0px 15.2233px 17.869px rgba(41, 255, 243, 0.0811362), 0px 8.5329px 10.0172px rgba(41, 255, 243, 0.068104), 0px 4.9202px 5.32008px rgba(41, 255, 243, 0.0556966), 0px 2.34808px 2.21381px rgba(41, 255, 243, 0.0396947);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
