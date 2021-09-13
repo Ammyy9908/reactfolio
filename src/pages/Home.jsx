@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Work from '../components/Work'
 import "./Home.css"
 import Contact from '../components/Contact'
+import Resume from '../components/Resume'
 
 function Home() {
     
@@ -30,6 +31,7 @@ function Home() {
             <Hero/>
             <Work/>
             <Contact/>
+            <Resume/>
             </div>
         </div>
     )

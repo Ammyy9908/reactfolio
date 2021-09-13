@@ -35,7 +35,6 @@
     position: absolute;
     top: 0px;
     left: 5px;
-    background-color: var(--secondary-color);
     border-radius: 25px;
     transform: rotate(10deg);
     transform-origin: 0 bottom;
@@ -80,8 +79,6 @@ font-style: normal;
 font-weight: bold;
 font-size: 72px;
 line-height: 84px;
-
-color: var(--secondary-color);
 display: inline;
 margin-bottom: 5px;
 }

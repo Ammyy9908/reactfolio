@@ -2,11 +2,12 @@ import React from 'react'
 import "./Navbar.css"
 import {FaGithub,FaLinkedin,} from "react-icons/fa"
 import {FiMenu} from "react-icons/fi"
-function Navbar() {
+import { connect } from 'react-redux'
+function Navbar(props) {
  
     return (
         <header>
-            <span className="brand-logo">SK</span>
+            <span className="brand-logo">{props.data && props.data.name.charAt(0)+props.data.name.charAt(1)}</span>
             <nav>
                 <ul>
                     <li><a href="/">Work</a></li>
@@ -24,5 +25,8 @@ function Navbar() {
         </header>
     )
 }
+const mapStateToProps = (state)=>({
+    data:state.appReducer.data
+})
 
-export default Navbar
+export default connect(mapStateToProps,null)(Navbar)
