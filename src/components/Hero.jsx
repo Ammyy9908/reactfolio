@@ -19,7 +19,7 @@ const [scroll,setScroll] = React.useState(0);
             <div className="section__wrapper">
                 <div className="portfolio__avatar">
                     <div className="portfolio__avatar__background" style={{top:`-${scroll}px`,left:`-${scroll}`,backgroundColor:`${props.data && props.data.color}`}}></div>
-                    <img src={props.data.image} alt="portfolio__avatar"/>
+                    {props.data && <img src={props.data.image} alt="portfolio__avatar"/>}
                 </div>
                 <div className="portfolio__meta">
                     <h1 className="heading">Hi, I'm {props.data ?props.data.name:"Sumit"} I am a </h1> <span className="role" style={{color:props.data && props.data.color}}>ReactJS Developer</span>
