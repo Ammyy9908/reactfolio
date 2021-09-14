@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Hero.css"
-import image from "../avatar.jpeg"
 import { connect } from 'react-redux';
 function Hero(props) {
 const [scroll,setScroll] = React.useState(0);
