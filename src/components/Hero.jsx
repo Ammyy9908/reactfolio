@@ -26,9 +26,9 @@ const [scroll,setScroll] = React.useState(0);
                 </div>
                 <div className="portfolio__meta">
                     {props.data ? <h1 className="heading">Hi, I'm {props.data.name} I am a </h1>:<div className="blank_heading"></div> }
-                    {props.data ? <span className="role" style={{color:props.data && props.data.color}}>ReactJS Developer</span>:<div className="blank__role"></div>}
+                    {props.data ? <span className="role" style={{color:props.data && props.data.color}}>{props.data.role}</span>:<div className="blank__role"></div>}
                     {props.data ?<div className="portfolio__subheading">
-                      <p>I’m Full Stack Web Developer in Mern Stack Love to Develope MERN Satck Web Applications.</p>
+                      <p>{props.data.subheading}</p>
                     </div>:<div className="blank_subheading"></div>}
                     {props.data ?<div className="portfolio__hero__actions">
                         <button>Contact me</button>
