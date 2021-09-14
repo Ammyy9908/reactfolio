@@ -194,6 +194,7 @@ color: #8D8D8D;
         
         
     }
+    
 
     
     .hero{
@@ -202,6 +203,10 @@ color: #8D8D8D;
     }
     .portfolio__avatar img{
         width: 210px;
+        height: 208px;
+    }
+    .box{
+        width:210px;
         height: 208px;
     }
     .portfolio__avatar__background{
@@ -214,6 +219,15 @@ color: #8D8D8D;
 @media screen and (max-width:690px){
     
     .portfolio__avatar img{
+        width: 127px;
+        height: 128px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+    }
+    .box{
         width: 127px;
         height: 128px;
         position: absolute;

@@ -6,13 +6,13 @@ import { connect } from 'react-redux'
 function Navbar(props) {
  
     return (
-        <header>
+        <header id="top">
             <span className="brand-logo">{props.data ? props.data.name.charAt(0)+props.data.name.charAt(1):<div className="blank_logo"></div>}</span>
             <nav>
                 <ul>
-                    <li><a href="/">Work</a></li>
-                    <li><a href="/">Resume</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div className="social__profiles">

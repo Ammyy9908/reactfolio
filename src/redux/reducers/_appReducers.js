@@ -1,6 +1,7 @@
 const intialState = {
     data:null,
-    works:null
+    works:null,
+    isEmailSent:false
     
 
  }
@@ -11,6 +12,13 @@ const intialState = {
             return{
                ...state,
                data:action.data
+            }
+         }
+
+         case "SET_EMAIL_SENT":{
+            return{
+               ...state,
+               isEmailSent:action.isEmailSent
             }
          }
 

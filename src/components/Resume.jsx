@@ -108,7 +108,7 @@ function Resume() {
         },
     ]
     return (
-        <div className="resume">
+        <div className="resume" id="resume">
             <Header title="Resume" subheading="Passonate Web Developer based on Bangalore,India, Love to deploy Web Apps in Specially in MERN Stack from past 2 Yrs."/>
             <div className="resume__content">
                 <h3 className="resume__title">Education</h3>

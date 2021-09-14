@@ -2,7 +2,6 @@ import React from 'react'
 import "./Hero.css"
 import { connect } from 'react-redux';
 function Hero(props) {
-const [scroll,setScroll] = React.useState(0);
 
 
 
@@ -10,10 +9,11 @@ const [scroll,setScroll] = React.useState(0);
 
     React.useEffect(()=>{
         window.onscroll = () => {
-          console.log(window.pageYOffset)
-          setScroll(window.pageYOffset/3)
+          props.setScroll(window.pageYOffset/3)
         }
-       },[])
+       },
+       // eslint-disable-next-line
+       [])
 
 
     return (
@@ -21,7 +21,7 @@ const [scroll,setScroll] = React.useState(0);
            
             <div className="section__wrapper">
                 <div className="portfolio__avatar">
-                    {props.data  ? <><div className="portfolio__avatar__background" style={{top:`-${scroll}px`,left:`-${scroll}`,backgroundColor:`${props.data && props.data.color}`}}></div>
+                    {props.data  ? <><div className="portfolio__avatar__background" style={{top:`-${props.scroll}px`,left:`-${props.scroll}`,backgroundColor:`${props.data && props.data.color}`}}></div>
                      <img src={props.data.image} alt="portfolio__avatar"/></>:<div className="box"></div>}
                 </div>
                 <div className="portfolio__meta">

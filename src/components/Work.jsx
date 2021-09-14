@@ -26,7 +26,7 @@ function WorkCard(){
 }
 function Work() {
     return (
-        <section className="work">
+        <section className="work" id="work">
            <Header title="Work" subheading="Check my Personal Web Projects.
 If you have any queries feel free to ask me for more information"/>
 

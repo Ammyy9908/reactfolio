@@ -1,0 +1,125 @@
+.modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.enable__modal{
+    display: flex;
+}
+
+.popup{
+    width: 590px;
+    position: relative;
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.07), 0px 2.50902px 72.9324px rgba(0, 0, 0, 0.0516456), 0px -0.341383px 50.9499px rgba(0, 0, 0, 0.0373291), 0px -0.258585px 25.5275px rgba(0, 0, 0, 0.0275776), 0px 0.173883px 10.8888px rgba(0, 0, 0, 0.0228833), 0px 0.319772px 3.38929px rgba(0, 0, 0, 0.0228275);
+    border-radius: 10px;
+    background-color: #fff;
+    height: 389px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    animation: scaleup .2s 1;
+}
+@keyframes scaleup{
+    0%{
+        transform: scale(.1);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+    opacity: 1;
+    }
+}
+
+.popup_close_btn{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.popup__content{
+    width: 85%;
+    margin-top: 35px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup__icon{
+    width: 112px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__content h3{
+    font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+
+.popup__content p{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #B4B4B4;
+}
+
+.done_btn{
+    
+border-radius: 5px;
+width: 201px;
+height: 51px;
+border: 1px solid transparent;
+cursor: pointer;
+color: #fff;
+font-size: 18px;
+line-height: 21px;
+}
+
+.success__close__btn{
+    color: #FF4B33;
+}
+.error__close__btn{
+    color: #5628D2;
+}
+
+.success__btn{
+    background: #FF4B33;
+}
+.error__btn{
+    background-color: #5628D2;
+}
