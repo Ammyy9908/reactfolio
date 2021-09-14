@@ -7,6 +7,8 @@
     margin-bottom: 45px;
 }
 
+
+
 .section__wrapper{
     width: 100%;
     display: flex;
@@ -42,6 +44,13 @@
     animation: rollup .2s ease-out;
 }
 
+.box{
+    width: 430px;
+    height: 430px;
+    background-color: #dadada;
+    border-radius: 25px;
+}
+
 .portfolio__meta{
     flex: 1;
 }
@@ -56,6 +65,28 @@
 .heading{
     animation: opac 3s 1;
    
+}
+
+.blank_heading{
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #dadada;
+    height: 48px;
+    border-radius: 3px;
+}
+.blank__role{
+    width: 75%;
+    height: 25px;
+    background-color: #06dfb0;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.blank_subheading{
+    width: 100%;
+    height: 25px;
+    background-color: #dadada;
+    margin-bottom: 25px;
+    border-radius: 3px;
 }
 
 @keyframes opac{
@@ -110,6 +141,20 @@ color: #8D8D8D;
     display: flex;
     align-items: center;
     gap:15px;
+}
+
+.blank_controls{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+.blank_controls div{
+    width: 175px;
+    height: 55px;
+    background-color: #dadada;
+    border-radius: 5px;
 }
 .portfolio__hero__actions button{
     width: 175px;

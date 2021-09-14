@@ -17,6 +17,14 @@ header{
     cursor: pointer;
 }
 
+.blank_logo{
+    width: 25px;
+    height: 25px;
+    background-color: #dadada;
+    border-radius: 50%;
+
+}
+
 nav{
     flex: 1;
 

@@ -7,7 +7,7 @@ function Navbar(props) {
  
     return (
         <header>
-            <span className="brand-logo">{props.data && props.data.name.charAt(0)+props.data.name.charAt(1)}</span>
+            <span className="brand-logo">{props.data ? props.data.name.charAt(0)+props.data.name.charAt(1):<div className="blank_logo"></div>}</span>
             <nav>
                 <ul>
                     <li><a href="/">Work</a></li>
