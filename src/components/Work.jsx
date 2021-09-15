@@ -78,6 +78,9 @@ If you have any queries feel free to ask me for more information"/>
                         return  <WorkCard key={i} thumb={work.thumb} name={work.name} tags={work.tags} desc={work.description} repo={work.repo} url={work.url}/>
                     }):<><BlankCard/>
                     <BlankCard/>
+                    <BlankCard/>
+                    <BlankCard/>
+                    <BlankCard/>
                     <BlankCard/></>
                 }
                
