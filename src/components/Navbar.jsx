@@ -24,8 +24,8 @@ function Navbar(props) {
                 </ul>
             </nav>
             <div className="social__profiles">
-                <button onClick={()=>handleNav('https://www.linkedin.com/in/sumit-kumar-097a3a204/')}><FaGithub/></button>
-                <button onClick={()=>handleNav('https://github.com/Ammyy9908')}><FaLinkedin/></button>
+                <button onClick={()=>handleNav('https://github.com/Ammyy9908')}><FaGithub/></button>
+                <button onClick={()=>handleNav('https://www.linkedin.com/in/sumit-kumar-097a3a204/')}><FaLinkedin/></button>
             </div>
             <button className="mobile_nav_menu" onClick={()=>props.setNav(!props.nav)}>
                 <FiMenu/>

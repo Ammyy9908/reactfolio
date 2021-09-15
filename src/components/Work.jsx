@@ -11,6 +11,9 @@ function WorkCard({thumb,name,tags,repo,url,desc}){
         window.location.href =url;
     }
 
+
+
+
     
    
     return <div className="work_card">
@@ -41,6 +44,25 @@ function WorkCard({thumb,name,tags,repo,url,desc}){
         </div>
     </div>
 }
+
+
+function BlankCard(){
+    return <div className="blank_card">
+        <div className="blank_thmb">
+
+        </div>
+        <div className="blank_work_title"></div>
+        <div className="blank_work_tags">
+            <span></span>
+            <span></span>
+        </div>
+        <div className="blank__work_desc"></div>
+        <div className="blank_work_controls">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+}
 function Work(props) {
     return (
         <section className="work" id="work">
@@ -52,10 +74,13 @@ If you have any queries feel free to ask me for more information"/>
                
 
                 {
-                    props.works && props.works.map((work,i)=>{
+                    props.works.length>0 ? props.works.map((work,i)=>{
                         return  <WorkCard key={i} thumb={work.thumb} name={work.name} tags={work.tags} desc={work.description} repo={work.repo} url={work.url}/>
-                    })
+                    }):<><BlankCard/>
+                    <BlankCard/>
+                    <BlankCard/></>
                 }
+               
                 
             </div>
         </section>
