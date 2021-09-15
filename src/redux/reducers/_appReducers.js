@@ -1,7 +1,8 @@
 const intialState = {
     data:null,
     works:null,
-    isEmailSent:false
+    isEmailSent:false,
+    nav:false
     
 
  }
@@ -19,6 +20,12 @@ const intialState = {
             return{
                ...state,
                isEmailSent:action.isEmailSent
+            }
+         }
+         case "SET_NAV":{
+            return{
+               ...state,
+               nav:action.nav
             }
          }
 

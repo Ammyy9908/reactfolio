@@ -72,6 +72,7 @@ nav ul li a{
 .mobile_nav_menu svg{
     width: 23px;
     height: 23px;
+    pointer-events: none;
 }
 @media screen and (max-width:565px){
     .social__profiles{

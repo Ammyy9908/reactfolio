@@ -3,7 +3,10 @@ import "./Navbar.css"
 import {FaGithub,FaLinkedin,} from "react-icons/fa"
 import {FiMenu} from "react-icons/fi"
 import { connect } from 'react-redux'
+import { setNav } from '../redux/actions/_appActions'
 function Navbar(props) {
+
+
  
     return (
         <header id="top">
@@ -19,14 +22,19 @@ function Navbar(props) {
                 <button><FaGithub/></button>
                 <button><FaLinkedin/></button>
             </div>
-            <button className="mobile_nav_menu">
+            <button className="mobile_nav_menu" onClick={()=>props.setNav(!props.nav)}>
                 <FiMenu/>
             </button>
         </header>
     )
 }
 const mapStateToProps = (state)=>({
-    data:state.appReducer.data
+    data:state.appReducer.data,
+    nav:state.appReducer.nav
 })
 
-export default connect(mapStateToProps,null)(Navbar)
+const mapDispatchToProps = (dispatch)=>({
+    setNav:(nav)=>dispatch(setNav(nav))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Navbar)

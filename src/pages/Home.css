@@ -67,7 +67,7 @@
     transform: scale(.1);
     opacity: 0;
     transition: all .3s ease-in-out;
-    box-shadow: 0px 100px 80px rgba(41, 255, 243, 0.15), 0px 31.5758px 33.4221px rgba(41, 255, 243, 0.0993905), 0px 15.2233px 17.869px rgba(41, 255, 243, 0.0811362), 0px 8.5329px 10.0172px rgba(41, 255, 243, 0.068104), 0px 4.9202px 5.32008px rgba(41, 255, 243, 0.0556966), 0px 2.34808px 2.21381px rgba(41, 255, 243, 0.0396947);
+    
 }
 
 .fab__enable{

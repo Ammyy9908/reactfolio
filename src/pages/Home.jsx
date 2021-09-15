@@ -8,9 +8,18 @@ import Resume from '../components/Resume'
 import Modal from '../components/Modal'
 import {MdExpandLess} from "react-icons/md"
 import { connect } from 'react-redux'
+import { setNav } from '../redux/actions/_appActions'
 
 function Home(props) {
     const [scroll,setScroll] = React.useState(0);
+
+
+    const handleNav = (e)=>{
+        console.log(e.target);
+        if(!e.target.classList.contains("mobile__nav") && !e.target.classList.contains("mobile_nav_menu")){
+            props.setNav(false)
+        }
+    }
 
     
 
@@ -20,18 +29,18 @@ function Home(props) {
 
     
     return (
-        <div className="home">
+        <div className="home" onClick={handleNav}>
             <Modal/>
             <div className="container">
             <Navbar/>
-            {/* <div className="mobile__nav">
+            {props.nav && <div className="mobile__nav">
                 <div className="nav__links">
-                <a href="#">WORK</a>
-                <a href="#">RESUME</a>
-                <a href="#">CONTACT</a>
+                <a href="#work">WORK</a>
+                <a href="#resume">RESUME</a>
+                <a href="#contact">CONTACT</a>
                 </div>
                 
-            </div> */}
+            </div>}
 
             
             <Hero scroll={scroll} setScroll={setScroll}/>
@@ -47,6 +56,11 @@ function Home(props) {
 
 
 const mapStateToProps = (state)=>({
-    data:state.appReducer.data
+    data:state.appReducer.data,
+    nav:state.appReducer.nav
 })
-export default connect(mapStateToProps,null)(Home)
+
+const mapDispatchToProps = (dispatch)=>({
+    setNav:(nav)=>dispatch(setNav(nav))
+})
+export default connect(mapStateToProps,mapDispatchToProps)(Home)

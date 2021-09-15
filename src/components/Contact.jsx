@@ -17,6 +17,7 @@ function Contact(props) {
     const [name,setName] = React.useState('');
     const [email,setEmail] = React.useState('');
     const [message,setMessage] = React.useState('')
+    const [caption,setCaption] = React.useState('Send')
     
 
     const playAudio = async (file)=>{
@@ -46,6 +47,7 @@ function Contact(props) {
 
     const handleContact = (e)=>{
         e.preventDefault();
+        setCaption('Sending...')
         sendMessage().then((response)=>{
             console.log(response)
             const {error} = response;
@@ -55,12 +57,17 @@ function Contact(props) {
                 playAudio(errorsound).then((status)=>{
                     props.setEmailSent({title:"Error while sending message",subheading:"There is an error while sending message please try again",type:"error"})
                     empty_fields()
+                    setCaption('Send')
                 })
                 return false
             }
             playAudio(wave).then((status)=>{
                 props.setEmailSent({title:"Message Sent!",subheading:"Your message to sumit is successfully sented!He will respond you shortly.",type:"success"})
                 empty_fields()
+                setCaption('Sented!')
+                setTimeout(()=>{
+                    setCaption('Send')
+                },5000)
             })
             
             
@@ -73,11 +80,11 @@ function Contact(props) {
         <section className="contact" id="contact">
             <Header title="Contact" subheading="Let me know if you are interested in my service or collaboration I will reply as soon as possible."/>
 
-            <form method="POST" onSubmit={handleContact}>
+            <form method="post" onSubmit={handleContact}>
                 <Field type="email" name="email" placeholder="Enter your emil address" value={email} setValue={setEmail}/>
                 <Field type="name" name="name" placeholder="Enter your full name" value={name} setValue={setName}/>
                 <textarea name="message" id="message" cols="30" rows="10" className="message" placeholder="Tell me" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-                <button type="submit" className="submit_btn">Send</button>
+                <button type="submit" className="submit_btn">{caption}</button>
             </form>
         </section>
     )

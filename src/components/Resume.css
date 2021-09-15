@@ -42,6 +42,29 @@ font-size: 24px;
 
 }
 
+.resume_download_caption{
+ 
+width: 100%;
+height: 36px;
+margin-top: 10px auto;
+color: #000000;
+text-align: center;
+}
+
+.resume_download_btn{
+    display: inline-flex;
+    margin: 10px auto;
+    width: 333px;
+height: 67px;
+background: #000000;
+color: #fff;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+border-radius: 5px;
+box-shadow: 0px 237px 80px rgba(0, 0, 0, 0.07), 0px 61.0598px 46.2432px rgba(0, 0, 0, 0.0456112), 0px 26.1745px 38.1825px rgba(0, 0, 0, 0.035), 0px 9.97911px 26.6828px rgba(0, 0, 0, 0.0243888);
+}
+
 @media screen and (max-width:968px){
     .skills__wrapper{
         width: 90%;
@@ -54,5 +77,11 @@ font-size: 24px;
         margin: 0;
        
     
+    }
+
+    .resume_download_btn{
+        width: 90%;
+        height: 49px;
+        font-size: 14px;
     }
 }

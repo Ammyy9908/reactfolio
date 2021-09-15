@@ -117,17 +117,20 @@ function Resume() {
 
             <h3 className="resume__title">Work Experience</h3>
             <ResumeSection  course="WEB DEVELOPMENT" institution="THE SPARKS FOUNDATION" year="2021"/>
-            <h3 className="resume__title">SKILLS & TOOLS</h3>
+            <h3 className="resume__title">Skills & Tools</h3>
 
             <div className="skills__wrapper">
                 {
                     skills.map((skill)=>{
                         return <span className="skill">
-                            {skill.name}
+                            {skill.name+" "}
+                            ({skill.level})
                         </span>
                     })
                 }
             </div>
+                <p className="resume_download_caption">Download my resume as pdf.</p>
+            <a href="#download" className="resume_download_btn">Download (735kb)</a>
             </div>
         </div>
     )
