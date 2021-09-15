@@ -3,7 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import socketio from "socket.io-client";
 import { connect } from 'react-redux';
-import { setData } from './redux/actions/_appActions';
+import { addWork, setData, setWorks } from './redux/actions/_appActions';
 import axios from 'axios';
 function App(props) {
 
@@ -15,6 +15,11 @@ function App(props) {
       console.log(data);
       props.setData(data)
     })
+
+    socket.on("work",(work)=>{
+      console.log(work);
+      props.addWork(work)
+    })
   },
   // eslint-disable-next-line
   [])
@@ -24,6 +29,14 @@ function App(props) {
     axios.get('https://portfoliosrever.herokuapp.com/data').then((response)=>{
       console.log(response);
       props.setData(response.data.data);
+    }).catch((e)=>{
+      console.log(e)
+    })
+
+    axios.get('https://portfoliosrever.herokuapp.com/works').then((response)=>{
+      console.log(response);
+      const {works} = response.data;
+      props.setWorks(works);
     }).catch((e)=>{
       console.log(e)
     })
@@ -42,6 +55,8 @@ function App(props) {
 
 
 const mapDispatchToProps = (dispatch)=>({
-  setData:(data)=>dispatch(setData(data))
+  setData:(data)=>dispatch(setData(data)),
+  setWorks:(works)=>dispatch(setWorks(works)),
+  addWork:(work)=>dispatch(addWork(work))
 })
 export default connect(null,mapDispatchToProps)(App);

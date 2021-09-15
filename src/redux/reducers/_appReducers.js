@@ -1,6 +1,6 @@
 const intialState = {
     data:null,
-    works:null,
+    works:[],
     isEmailSent:false,
     nav:false
     
@@ -28,6 +28,21 @@ const intialState = {
                nav:action.nav
             }
          }
+
+         case "SET_WORKS":{
+            return{
+               ...state,
+               works:action.works
+            }
+         }
+
+         case "ADD_WORK":{
+            return{
+               ...state,
+               works:[...state.works,action.work]
+            }
+         }
+
 
          
        
