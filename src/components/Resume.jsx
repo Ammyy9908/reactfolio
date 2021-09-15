@@ -130,7 +130,7 @@ function Resume() {
                 }
             </div>
                 <p className="resume_download_caption">Download my resume as pdf.</p>
-            <a href="#download" className="resume_download_btn">Download (735kb)</a>
+            <a href="https://portfoliosrever.herokuapp.com/resume" className="resume_download_btn">Download (158Kb)</a>
             </div>
         </div>
     )
