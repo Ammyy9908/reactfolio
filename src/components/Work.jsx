@@ -19,7 +19,7 @@ function WorkCard({thumb,name,tags,repo,url,desc}){
     return <div className="work_card">
         <div className="card__thumb">
             <div className="card__thumb__image">
-                <img src={thumb} alt="project__thumb" />
+                <img src={thumb} alt="project__thumb" loading="lazy"/>
             </div>
         </div>
         <span className="work__title">{name}</span>

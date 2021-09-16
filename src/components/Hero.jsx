@@ -22,7 +22,7 @@ function Hero(props) {
             <div className="section__wrapper">
                 <div className="portfolio__avatar">
                     {props.data  ? <><div className="portfolio__avatar__background" style={{top:`-${props.scroll}px`,left:`-${props.scroll}`,backgroundColor:`${props.data && props.data.color}`}}></div>
-                     <img src={props.data.image} alt="portfolio__avatar"/></>:<div className="box"></div>}
+                     <img src={props.data.image} alt="portfolio__avatar" loading="lazy"/></>:<div className="box"></div>}
                 </div>
                 <div className="portfolio__meta">
                     {props.data ? <h1 className="heading">Hi, I'm {props.data.name} I am a </h1>:<div className="blank_heading"></div> }
