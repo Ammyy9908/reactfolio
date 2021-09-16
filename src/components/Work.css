@@ -142,6 +142,33 @@ line-height: 21px;
     position: relative;
     cursor: pointer;
 }
+
+
+
+.blank_thmb::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    );
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: loading .6s infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: skewX(-10deg) translateX(-100%);
+    }
+    100% {
+      transform: skewX(-10deg) translateX(200%);
+    }
+  }
 .blank_work_title{
     width: 75%;
     height: 12px;
