@@ -13,6 +13,8 @@ function App(props) {
 
     socket.on("data",(data)=>{
       console.log(data);
+      const {name} = data;
+      document.window.title(name);
       props.setData(data)
     })
 
