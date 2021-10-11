@@ -30,6 +30,9 @@ function App(props) {
   React.useEffect(()=>{
     axios.get('https://portfoliosrever.herokuapp.com/data').then((response)=>{
       console.log(response);
+      
+      const {name} = response.data.data;
+      document.title = name; 
       props.setData(response.data.data);
     }).catch((e)=>{
       console.log(e)
