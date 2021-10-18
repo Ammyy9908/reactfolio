@@ -13,3 +13,5 @@ const ArticleAdd = ()=>{
     
     )
 }
+
+export default ArticleAdd
