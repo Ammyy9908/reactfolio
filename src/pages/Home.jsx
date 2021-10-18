@@ -9,6 +9,7 @@ import Modal from '../components/Modal'
 import {MdExpandLess} from "react-icons/md"
 import { connect } from 'react-redux'
 import { setNav } from '../redux/actions/_appActions'
+import ArticleAdd from "../components/ArticleAdd"
 
 function Home(props) {
     const [scroll,setScroll] = React.useState(0);
@@ -33,6 +34,8 @@ function Home(props) {
             <Modal/>
             <div className="container">
             <Navbar/>
+                
+                <ArticleAdd/>
             {props.nav && <div className="mobile__nav">
                 <div className="nav__links">
                 <a href="#work">WORK</a>
