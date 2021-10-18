@@ -35,7 +35,7 @@ function Home(props) {
             <div className="container">
             <Navbar/>
                 
-//                 <ArticleAdd/>
+
             {props.nav && <div className="mobile__nav">
                 <div className="nav__links">
                 <a href="#work">WORK</a>
