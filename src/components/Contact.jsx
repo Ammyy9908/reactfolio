@@ -28,7 +28,7 @@ function Contact(props) {
 
     const sendMessage = async ()=>{
         
-            const r = await axios.post(`https://portfoliosrever.herokuapp.com/contact`,{
+            const r = await axios.post(`https://email-service0.herokuapp.com/feedback`,{
                 name,
                 email,
                 message
@@ -50,10 +50,10 @@ function Contact(props) {
         setCaption('Sending...')
         sendMessage().then((response)=>{
             console.log(response)
-            const {error} = response;
+            const {status} = response;
 
-            if(error){
-                console.log(error)
+            if(status==="error"){
+               
                 playAudio(errorsound).then((status)=>{
                     props.setEmailSent({title:"Error while sending message",subheading:"There is an error while sending message please try again",type:"error"})
                     empty_fields()
